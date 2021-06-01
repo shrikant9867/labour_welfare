@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include labour_welfare *.css
+recursive-include labour_welfare *.csv
+recursive-include labour_welfare *.html
+recursive-include labour_welfare *.ico
+recursive-include labour_welfare *.js
+recursive-include labour_welfare *.json
+recursive-include labour_welfare *.md
+recursive-include labour_welfare *.png
+recursive-include labour_welfare *.py
+recursive-include labour_welfare *.svg
+recursive-include labour_welfare *.txt
+recursive-exclude labour_welfare *.pyc
