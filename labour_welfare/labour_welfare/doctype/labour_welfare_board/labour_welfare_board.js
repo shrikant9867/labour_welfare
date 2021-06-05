@@ -5,26 +5,27 @@ frappe.ui.form.on('Labour Welfare Board', {
 	refresh: function (frm) {
 		
 	},
-	onload: function (frm) {
-		if(frm.doc.dob){
-			$(frm.fields_dict['age_of_beneficiary'].wrapper).html("AGE : " + get_age(frm.doc.dob));
-		}
-	}
+	onload: function (frm)
+	registration_number: function(frm){
+		console.log("FunctionCalled.");
+		frappe.call({
+			method:'labour_welfare.labour_welfare.doctype.labour_welfare_board.labour_welfare_board.get_registration_data',
+			args:{
+				"registration_id":frm.doc.registration_number
+			},
+			callback:function(r){
+				console.log(r.message[0]);
+				if (r.message[0]){
+					console.log(r.message[0].registration_date);
+					//frm.doc.registration_date = r.message[0].registration_date;
+					//frm.set_value("registration_date",r.message[0].registration_date);
+					set_form_values(frm,r.message[0]); 
+				}
+			}
+	});
+		console.log("TPPPPPPPPPPPFunctionCalled.",);
+}
 });
-
-frappe.ui.form.on("Labour Welfare Board", "dob", function(frm) {
-	if(frm.doc.dob){
-		var today = new Date();
-		var birthDate = new Date(frm.doc.dob);
-		var age_str = get_age(frm.doc.dob);
-		$(frm.fields_dict['age_of_beneficiary'].wrapper).html("AGE : " + age_str);
-	}
-});
-
-var get_age = function (birth) {
-	var ageMS = Date.parse(Date()) - Date.parse(birth);
-	var age_of_beneficiary = new Date();
-	age_of_beneficiary.setTime(ageMS);
-	var years = age_of_beneficiary.getFullYear() - 1970;
-	return years + " Year(s) " + age_of_beneficiary.getMonth() + " Month(s) " + age_of_beneficiary.getDate() + " Day(s)";
+var set_form_values = function(frm,data){
+		frm.set_value("registration_date",data.registration_date);
 };
