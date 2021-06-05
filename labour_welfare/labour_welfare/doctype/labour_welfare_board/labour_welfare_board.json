@@ -7,12 +7,10 @@
  "engine": "InnoDB",
  "field_order": [
   "registration_number_search",
-  "search",
-  "section_break_4",
   "registration_date",
   "new",
   "renewal",
-  "data_4",
+  "full_name_of_domestic_work",
   "birthdate_of_beneficiany",
   "age_of_beneficiary",
   "sex",
@@ -51,11 +49,6 @@
    "fieldname": "registration_date",
    "fieldtype": "Date",
    "label": "Registration Date / \u0928\u094b\u0902\u0926\u0923\u0940 \u0926\u093f\u0928\u093e\u0902\u0915"
-  },
-  {
-   "fieldname": "data_4",
-   "fieldtype": "Data",
-   "label": "Full Name of Domestic Work / \u0918\u0930\u0917\u0941\u0924\u0940 \u0915\u093e\u092e\u093e\u091a\u0947 \u092a\u0942\u0930\u094d\u0923 \u0928\u093e\u0935"
   },
   {
    "fieldname": "birthdate_of_beneficiany",
@@ -155,15 +148,6 @@
    "unique": 1
   },
   {
-   "fieldname": "search",
-   "fieldtype": "Data",
-   "label": "Search"
-  },
-  {
-   "fieldname": "section_break_4",
-   "fieldtype": "Section Break"
-  },
-  {
    "fieldname": "please_fill_below_attachment_section",
    "fieldtype": "Section Break",
    "label": "Please Fill Below Attachment"
@@ -203,12 +187,13 @@
   },
   {
    "fieldname": "new",
-   "fieldtype": "Date",
+   "fieldtype": "Data",
    "label": "New / \u0928\u0935\u0940\u0928"
   },
   {
+   "default": "0",
    "fieldname": "renewal",
-   "fieldtype": "Data",
+   "fieldtype": "Check",
    "label": "Renewal / \u0928\u0942\u0924\u0928\u0940\u0915\u0930\u0923"
   },
   {
@@ -220,11 +205,16 @@
    "fieldname": "owner_mobile_name",
    "fieldtype": "Data",
    "label": "Owner Mobile Number / \u092e\u093e\u0932\u0915\u093e\u091a\u0947 \u092e\u094b\u092c\u093e\u0907\u0932 \u0928\u0902\u092c\u0930"
+  },
+  {
+   "fieldname": "full_name_of_domestic_work",
+   "fieldtype": "Data",
+   "label": "Full Name of Domestic Work / \u0918\u0930\u0917\u0941\u0924\u0940 \u0915\u093e\u092e\u093e\u091a\u0947 \u092a\u0942\u0930\u094d\u0923 \u0928\u093e\u0935"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-06-05 17:06:01.772747",
+ "modified": "2021-06-05 19:20:20.565447",
  "modified_by": "Administrator",
  "module": "Labour Welfare",
  "name": "Labour Welfare Board",
