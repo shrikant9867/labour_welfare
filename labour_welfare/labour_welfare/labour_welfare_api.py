@@ -8,6 +8,7 @@ import json
 import tempfile
 
 
+
 @frappe.whitelist()
 def labour_welfare(data=None):
 	data = json.loads(data)
