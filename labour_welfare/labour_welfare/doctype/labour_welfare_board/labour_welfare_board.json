@@ -1,58 +1,53 @@
 {
  "actions": [],
+ "autoname": "field:registration_number_search",
  "creation": "2021-06-01 16:03:11.440727",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "registration_number",
+  "registration_number_search",
   "registration_date",
-  "data_4",
+  "registration_district",
+  "full_name_of_domestic_work",
   "birthdate_of_beneficiany",
   "age_of_beneficiary",
   "sex",
   "mobile_number",
   "adhar_card_number",
-  "receipt_image_file_name",
-  "aadhar_card_copy",
   "residence_address",
   "state",
   "district",
   "village_city",
   "pincode",
-  "address_proof",
   "owner_name",
   "owner_address",
   "owner_mobile_number",
   "beneficiary_bank_name",
   "beneficiary_bank_account_number",
   "ifsc_code",
-  "cancelled_cheque_copy__bank_passbook_copy",
   "beneficiaries_total_number_of_offspring",
   "name_of_nominee",
-  "relationship_to_nominee"
+  "relationship_to_nominee",
+  "please_fill_below_attachment_section",
+  "receipt_image_file_name",
+  "please_choose_any_one_identity_proof",
+  "identity_proof_file_name",
+  "please_choose_any_one_address_proof",
+  "address_proof_file_name",
+  "please_select_an_option",
+  "bank_copy_file_name"
  ],
  "fields": [
   {
-   "fieldname": "registration_number",
-   "fieldtype": "Data",
-   "label": "Registration Number / \u0928\u094b\u0902\u0926\u0923\u0940 \u0915\u094d\u0930\u092e\u093e\u0902\u0915"
-  },
-  {
    "fieldname": "receipt_image_file_name",
-   "fieldtype": "Attach",
-   "label": "Receipt Image File Name"
+   "fieldtype": "Data",
+   "label": "Receipt Image File Name / \u092a\u093e\u0935\u0924\u0940 \u092a\u094d\u0930\u0924\u093f\u092e\u093e \u092b\u093e\u0907\u0932 \u0928\u093e\u0935"
   },
   {
    "fieldname": "registration_date",
-   "fieldtype": "Select",
-   "label": "Registration Date / \u0928\u094b\u0902\u0926\u0923\u0940 \u0926\u093f\u0928\u093e\u0902\u0915",
-   "options": "New / \u0928\u0935\u0940\u0928\nRenewal / \u0928\u0942\u0924\u0928\u0940\u0915\u0930\u0923"
-  },
-  {
-   "fieldname": "data_4",
-   "fieldtype": "Data",
-   "label": "Full Name of Domestic Work / \u0918\u0930\u0917\u0941\u0924\u0940 \u0915\u093e\u092e\u093e\u091a\u0947 \u092a\u0942\u0930\u094d\u0923 \u0928\u093e\u0935"
+   "fieldtype": "Date",
+   "label": "Registration Date / \u0928\u094b\u0902\u0926\u0923\u0940 \u0926\u093f\u0928\u093e\u0902\u0915"
   },
   {
    "fieldname": "birthdate_of_beneficiany",
@@ -71,23 +66,13 @@
    "options": "Male / \u092a\u0941\u0930\u0942\u0937\nFemale / \u092e\u0939\u093f\u0932\u093e\nOther / \u0907\u0924\u0930"
   },
   {
-   "fieldname": "mobile_number",
-   "fieldtype": "Data",
-   "label": "Mobile Number / \u092e\u094b\u092c\u093e\u0907\u0932 \u0928\u0902\u092c\u0930"
-  },
-  {
    "fieldname": "adhar_card_number",
    "fieldtype": "Data",
    "label": "Adhar Card Number / \u0906\u0927\u093e\u0930 \u0915\u093e\u0930\u094d\u0921 \u0915\u094d\u0930\u092e\u093e\u0902\u0915"
   },
   {
-   "fieldname": "aadhar_card_copy",
-   "fieldtype": "Attach",
-   "label": "Aadhar card copy / \u0906\u0927\u093e\u0930 \u0915\u093e\u0930\u094d\u0921\u093e\u091a\u0940 \u092a\u094d\u0930\u0924"
-  },
-  {
    "fieldname": "residence_address",
-   "fieldtype": "Data",
+   "fieldtype": "Small Text",
    "label": "Residence Address / \u0918\u0930\u0917\u0941\u0924\u0940 \u0915\u093e\u092e\u0917\u093e\u0930\u093e\u0902\u091a\u093e \u0930\u0939\u093f\u0935\u093e\u0938\u0940 \u092a\u0924\u094d\u0924\u093e"
   },
   {
@@ -113,18 +98,13 @@
    "label": "Pincode / \u092a\u093f\u0928 \u0915\u094b\u0921"
   },
   {
-   "fieldname": "address_proof",
-   "fieldtype": "Attach",
-   "label": "Address proof / \u092a\u0924\u094d\u0924\u093e \u092a\u0941\u0930\u093e\u0935\u093e"
-  },
-  {
    "fieldname": "owner_name",
-   "fieldtype": "Small Text",
+   "fieldtype": "Data",
    "label": "Owner Name / \u092e\u093e\u0932\u0915 \u092a\u0942\u0930\u094d\u0923 \u0928\u093e\u0935"
   },
   {
    "fieldname": "owner_address",
-   "fieldtype": "Text",
+   "fieldtype": "Small Text",
    "label": "Owner Address / \u092e\u093e\u0932\u0915\u093e\u091a\u093e \u092a\u0924\u094d\u0924\u093e"
   },
   {
@@ -135,7 +115,8 @@
   {
    "fieldname": "beneficiary_bank_name",
    "fieldtype": "Select",
-   "label": "Beneficiary Bank Name / \u0932\u093e\u092d\u093e\u0930\u094d\u0925\u0940 \u092c\u0901\u0915\u0947\u091a\u0947 \u0928\u093e\u0935"
+   "label": "Beneficiary Bank Name / \u0932\u093e\u092d\u093e\u0930\u094d\u0925\u0940 \u092c\u0901\u0915\u0947\u091a\u0947 \u0928\u093e\u0935",
+   "options": "\nABHYUDAYA COOPERATIVE BANK LIMITED\nABU DHABI COMMERCIAL BANK\nAHMEDABAD MERCANTILE COOPERATIVE BANK\nAKOLA JANATA COMMERCIAL COOPERATIVE BANK\nALLAHABAD BANK\nANDHRA BANK\nAPNA SAHAKARI BANK LIMITED\nAUSTRALIA AND NEW ZEALAND BANKING GROUP LIMITED\nAXIS BANK\nB N P PARIBAS\nBANDHAN BANK LIMITED\nBANK INTERNASIONAL INDONESIA\nBANK OF AMERICA\nBANK OF BAHARAIN AND KUWAIT BSC\nBANK OF BARODA\nBANK OF INDIA\nBANK OF MAHARASHTRA\nBANK OF TOKYO MITSUBISHI LIMITED\nBARCLAYS BANK\nBASSEIN CATHOLIC COOPERATIVE BANK LIMITED\nBHARAT COOPERATIVE BANK MUMBAI LIMITED\nBHARATIYA MAHILA BANK LIMITED\nCANARA BANK\nCATHOLIC SYRIAN BANK LIMITED\nCENTRAL BANK OF INDIA\nCITI BANK\nCITIZEN CREDIT COOPERATIVE BANK LIMITED\nCITY UNION BANK LIMITED\nCOMMONWEALTH BANK OF AUSTRALIA\nCORPORATION BANK\nCREDIT AGRICOLE CORPORATE AND INVESTMENT BANK CALYON BANK\nCREDIT SUISEE AG\nDCB BANK LIMITED\nDENA BANK\nDEPOSIT INSURANCE AND CREDIT GUARANTEE CORPORATION\nDEUSTCHE BANK\nDEVELOPMENT BANK OF SINGAPORE\nDHANALAKSHMI BANK\nDOHA BANK\nDOHA BANK QSC\nDOMBIVLI NAGARI SAHAKARI BANK LIMITED\nEXPORT IMPORT BANK OF INDIA\nFEDERAL BANK\nFIRSTRAND BANK LIMITED\nG P PARSIK BANK\nHDFC BANK\nHSBC BANK\nHSBC BANK OMAN SAOG\nICICI BANK LIMITED\nIDBI BANK\nINDIAN BANK\nINDIAN OVERSEAS BANK\nINDUSIND BANK\nINDUSTRIAL AND COMMERCIAL BANK OF CHINA LIMITED\nING VYSYA BANK\nJALGAON JANATA SAHAKARI BANK LIMITED\nJAMMU AND KASHMIR BANK LIMITED\nJANAKALYAN SAHAKARI BANK LIMITED\nJANASEVA SAHAKARI BANK BORIVLI LIMITED\nJANASEVA SAHAKARI BANK LIMITED\nJANATA SAHAKARI BANK LIMITED\nJP MORGAN BANK\nKALLAPPANNA AWADE ICHALKARANJI JANATA SAHAKARI BANK LIMITED\nKALUPUR COMMERCIAL COOPERATIVE BANK\nKALYAN JANATA SAHAKARI BANK\nKAPOL COOPERATIVE BANK LIMITED\nKARNATAKA BANK LIMITED\nKARNATAKA VIKAS GRAMEENA BANK\nKARUR VYSYA BANK\nKOTAK MAHINDRA BANK LIMITED\nLAXMI VILAS BANK\nMAHANAGAR COOPERATIVE BANK\nMAHARASHTRA STATE COOPERATIVE BANK\nMASHREQBANK PSC\nMIZUHO CORPORATE BANK LIMITED\nNAGAR URBAN CO OPERATIVE BANK\nNAGPUR NAGARIK SAHAKARI BANK LIMITED\nNAGPUR NAGRIK SAHAKARI BANK LTD\nNATIONAL AUSTRALIA BANK LIMITED\nNEW INDIA COOPERATIVE BANK LIMITED\nNKGSB COOPERATIVE BANK LIMITED\nNUTAN NAGARIK SAHAKARI BANK LIMITED\nORIENTAL BANK OF COMMERCE\nPUNJAB AND MAHARSHTRA COOPERATIVE BANK\nPUNJAB AND SIND BANK\nPUNJAB NATIONAL BANK\nRABOBANK INTERNATIONAL\nRAJGURUNAGAR SAHAKARI BANK LIMITED\nRATNAKAR BANK LIMITED\nRESERVE BANK OF INDIA\nSAHEBRAO DESHMUKH COOPERATIVE BANK LIMITED\nSARASWAT COOPERATIVE BANK LIMITED\nSHIKSHAK SAHAKARI BANK LIMITED\nSHINHAN BANK\nSHRI CHHATRAPATI RAJASHRI SHAHU URBAN COOPERATIVE BANK LIMITED\nSOCIETE GENERALE\nSOLAPUR JANATA SAHAKARI BANK LIMITED\nSOUTH INDIAN BANK\nSTANDARD CHARTERED BANK\nSTATE BANK OF BIKANER AND JAIPUR\nSTATE BANK OF HYDERABAD\nSTATE BANK OF INDIA\nSTATE BANK OF MAURITIUS LIMITED\nSTATE BANK OF MYSORE\nSTATE BANK OF PATIALA\nSTATE BANK OF TRAVANCORE\nSYNDICATE BANK\nTAMILNAD MERCANTILE BANK LIMITED\nTHE AKOLA DISTRICT CENTRAL COOPERATIVE BANK\nTHE BANK OF NOVA SCOTIA\nTHE COSMOS CO OPERATIVE BANK LIMITED\nTHE GADCHIROLI DISTRICT CENTRAL COOPERATIVE BANK LIMITED\nTHE GREATER BOMBAY COOPERATIVE BANK LIMITED\nTHE JALGAON PEOPELS COOPERATIVE BANK LIMITED\nTHE KARAD URBAN COOPERATIVE BANK LIMITED\nTHE MUMBAI DISTRICT CENTRAL COOPERATIVE BANK LIMITED\nTHE MUNICIPAL COOPERATIVE BANK LIMITED\nTHE NASIK MERCHANTS COOPERATIVE BANK LIMITED\nTHE ROYAL BANK OF SCOTLAND N V\nTHE SEVA VIKAS COOPERATIVE BANK LIMITED\nTHE SHAMRAO VITHAL COOPERATIVE BANK\nTHE THANE BHARAT SAHAKARI BANK LIMITED\nTHE THANE DISTRICT CENTRAL COOPERATIVE BANK LIMITED\nTHE VISHWESHWAR SAHAKARI BANK LIMITED\nTHE ZOROASTRIAN COOPERATIVE BANK LIMITED\nTJSB SAHAKARI BANK LIMITED\nTJSB SAHAKARI BANK LTD\nUCO BANK\nUNION BANK OF INDIA\nUNITED BANK OF INDIA\nUNITED OVERSEAS BANK LIMITED\nVASAI VIKAS SAHAKARI BANK LIMITED\nVIJAYA BANK\nWESTPAC BANKING CORPORATION\nYES BANK"
   },
   {
    "fieldname": "beneficiary_bank_account_number",
@@ -148,16 +129,6 @@
    "label": "IFSC Code / \u0932\u093e\u092d\u093e\u0930\u094d\u0925\u0940 \u092c\u0901\u0915 \u0906\u092f\u090f\u092b\u090f\u0938\u0938\u0940 \u0915\u094b\u0921"
   },
   {
-   "fieldname": "cancelled_cheque_copy__bank_passbook_copy",
-   "fieldtype": "Attach",
-   "label": "Cancelled Cheque Copy / Bank Passbook Copy / \u0930\u0926\u094d\u0926 \u0927\u0928\u093e\u0926\u0947\u0936 \u091a\u0940 \u092a\u094d\u0930\u0924 / \u092c\u0901\u0915 \u092a\u093e\u0938\u092c\u0941\u0915 \u092a\u094d\u0930\u0924"
-  },
-  {
-   "fieldname": "name_of_nominee",
-   "fieldtype": "Data",
-   "label": "Name of Nominee / \u0935\u093e\u0930\u0938\u0926\u093e\u0930 \u0928\u093e\u0935"
-  },
-  {
    "fieldname": "relationship_to_nominee",
    "fieldtype": "Select",
    "label": "Relationship to Nominee / \u0935\u093e\u0930\u0938\u0926\u093e\u0930\u093e\u0936\u0940  \u0905\u0938\u0932\u0947\u0932\u0947 \u0928\u093e\u0924\u0947",
@@ -167,12 +138,77 @@
    "fieldname": "beneficiaries_total_number_of_offspring",
    "fieldtype": "Select",
    "label": "Beneficiaries Total number of offspring / \u0932\u093e\u092d\u093e\u0930\u094d\u0925\u0940 \u090f\u0915\u0941\u0923 \u0905\u092a\u0924\u094d\u092f\u093e\u091a\u0940 \u0938\u0902\u0916\u094d\u092f\u093e",
-   "options": "1\n2\n3\n4"
+   "options": "0\n1\n2\n3\n4"
+  },
+  {
+   "fieldname": "registration_number_search",
+   "fieldtype": "Data",
+   "label": "Registration Number / \u0928\u094b\u0902\u0926\u0923\u0940 \u0915\u094d\u0930\u092e\u093e\u0902\u0915",
+   "unique": 1
+  },
+  {
+   "fieldname": "please_fill_below_attachment_section",
+   "fieldtype": "Section Break",
+   "label": "Please Fill Below Attachment"
+  },
+  {
+   "fieldname": "please_choose_any_one_identity_proof",
+   "fieldtype": "Select",
+   "label": "Please Choose Any One Identity Proof / \u0915\u0943\u092a\u092f\u093e \u0915\u094b\u0923\u0924\u093e\u0939\u0940 \u090f\u0915 \u0913\u0933\u0916 \u092a\u0941\u0930\u093e\u0935\u093e \u0928\u093f\u0935\u0921\u093e",
+   "options": "\nAadhaar Card (UID) / \u0906\u0927\u093e\u0930 \u0915\u093e\u0930\u094d\u0921 (\u092f\u0942\u0906\u092f\u0921\u0940)\nPassport / \u092a\u093e\u0938\u092a\u094b\u0930\u094d\u091f\nPermanent Driving License / \u0915\u093e\u092f\u092e\u0938\u094d\u0935\u0930\u0941\u092a\u0940 \u0935\u093e\u0939\u0928 \u091a\u093e\u0932\u0935\u093f\u0923\u094d\u092f\u093e\u091a\u093e \u092a\u0930\u0935\u093e\u0928\u093e\nPAN Card / \u092a\u0945\u0928 \u0915\u093e\u0930\u094d\u0921\nVoter ID Card / \u092e\u0924\u0926\u093e\u0930 \u0913\u0933\u0916\u092a\u0924\u094d\u0930\nRental Agreement or Lease Agreement / \u092d\u093e\u0921\u0947 \u0915\u0930\u093e\u0930 \u0915\u093f\u0902\u0935\u093e \u0932\u0940\u091c \u0915\u0930\u093e\u0930\nRation Card / \u0930\u0947\u0936\u0928 \u0915\u093e\u0930\u094d\u0921"
+  },
+  {
+   "fieldname": "please_choose_any_one_address_proof",
+   "fieldtype": "Select",
+   "label": "Please Choose Any One Address Proof / \u0915\u0943\u092a\u092f\u093e \u0915\u094b\u0923\u0924\u093e\u0939\u0940 \u090f\u0915 \u092a\u0924\u094d\u0924\u093e \u092a\u0941\u0930\u093e\u0935\u093e \u0928\u093f\u0935\u0921\u093e",
+   "options": "\nResidential proof / \u0930\u0939\u093f\u0935\u093e\u0936\u0940 \u092a\u0941\u0930\u0935\u093e\nAadhaar Card (UID) / \u0906\u0927\u093e\u0930 \u0915\u093e\u0930\u094d\u0921 (\u092f\u0942\u0906\u092f\u0921\u0940)\nPassport / \u092a\u093e\u0938\u092a\u094b\u0930\u094d\u091f\nPermanent Driving License / \u0915\u093e\u092f\u092e\u0938\u094d\u0935\u0930\u0941\u092a\u0940 \u0935\u093e\u0939\u0928 \u091a\u093e\u0932\u0935\u093f\u0923\u094d\u092f\u093e\u091a\u093e \u092a\u0930\u0935\u093e\u0928\u093e\nCredit Card / \u0936\u093f\u0927\u093e\u092a\u0924\u094d\u0930\u093f\u0915\u093e\nElectricity Payment of Previous Month / \u092e\u093e\u0917\u0940\u0932 \u092e\u0939\u093f\u0928\u094d\u092f\u093e\u091a\u0947 \u0935\u0940\u091c \u0926\u0947\u092f\nGram Panchayat Certificate / \u0917\u094d\u0930\u093e\u092e\u092a\u0902\u091a\u093e\u092f\u0924 \u092a\u094d\u0930\u092e\u093e\u0923\u092a\u0924\u094d\u0930"
+  },
+  {
+   "fieldname": "please_select_an_option",
+   "fieldtype": "Select",
+   "label": "Please Select An Option / \u0915\u0943\u092a\u092f\u093e \u090f\u0915 \u092a\u0930\u094d\u092f\u093e\u092f \u0928\u093f\u0935\u0921\u093e",
+   "options": "\nCancelled Cheque Copy / \u0930\u0926\u094d\u0926 \u0927\u0928\u093e\u0926\u0947\u0936 \u091a\u0940 \u092a\u094d\u0930\u0924\nBank Passbook Copy / \u092c\u0901\u0915 \u092a\u093e\u0938\u092c\u0941\u0915 \u092a\u094d\u0930\u0924"
+  },
+  {
+   "fieldname": "mobile_number",
+   "fieldtype": "Data",
+   "label": "Mobile Number / \u092e\u094b\u092c\u093e\u0907\u0932 \u0928\u0902\u092c\u0930 "
+  },
+  {
+   "fieldname": "full_name_of_domestic_work",
+   "fieldtype": "Data",
+   "label": "Full Name of Domestic Work / \u0918\u0930\u0917\u0941\u0924\u0940 \u0915\u093e\u092e\u093e\u091a\u0947 \u092a\u0942\u0930\u094d\u0923 \u0928\u093e\u0935"
+  },
+  {
+   "fieldname": "name_of_nominee",
+   "fieldtype": "Data",
+   "label": "\u0935\u093e\u0930\u0938\u0926\u093e\u0930 \u0928\u093e\u0935/Name of Nominee"
+  },
+  {
+   "fieldname": "identity_proof_file_name",
+   "fieldtype": "Data",
+   "label": "Identity Proof File Name  / \u0913\u0933\u0916 \u092a\u0941\u0930\u093e\u0935\u093e \u092b\u093e\u0907\u0932 \u0928\u093e\u0935"
+  },
+  {
+   "fieldname": "address_proof_file_name",
+   "fieldtype": "Data",
+   "label": "Address Proof File Name /\u092a\u0924\u094d\u0924\u093e \u092a\u0941\u0930\u093e\u0935\u093e \u092b\u093e\u0907\u0932 \u0928\u093e\u0935"
+  },
+  {
+   "fieldname": "bank_copy_file_name",
+   "fieldtype": "Data",
+   "label": "Bank Copy File Name/\u092c\u0901\u0915 \u0915\u0949\u092a\u0940 \u092b\u093e\u0907\u0932 \u0928\u093e\u0935"
+  },
+  {
+   "fieldname": "registration_district",
+   "fieldtype": "Select",
+   "label": "Registration District/\u0928\u094b\u0902\u0926\u0923\u0940 \u091c\u093f\u0932\u094d\u0939\u093e",
+   "options": "Ahmednagar\nAkola\nAmravati\nAurangabad\nBeed\nBhandara\nBuldhana\nChandrapur\nDhule\nGadchiroli\nGondia\nHingoli\nJalgaon\nJalna\nKolhapur\nLatur\nMumbai City\nMumbai Suburban\nNagpur\nNanded\nNandurbar\nNashik\nOsmanabad\nPalghar\nParbhani\nPune\nRaigad\nRatnagiri\nSangli\nSatara\nSindhudurg\nSolapur\nThane\nWardha\nWashim\nYavatmal"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-06-02 18:23:49.533664",
+ "modified": "2021-06-08 09:49:48.163662",
  "modified_by": "Administrator",
  "module": "Labour Welfare",
  "name": "Labour Welfare Board",
