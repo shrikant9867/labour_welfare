@@ -1,11 +1,12 @@
 {
  "actions": [],
- "autoname": "field:registration_number_search",
+ "autoname": "field:registation_no",
  "creation": "2021-06-01 16:03:11.440727",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "registation_no",
   "registration_number_search",
   "registration_date",
   "registration_district",
@@ -204,11 +205,18 @@
    "fieldtype": "Select",
    "label": "Registration District/\u0928\u094b\u0902\u0926\u0923\u0940 \u091c\u093f\u0932\u094d\u0939\u093e",
    "options": "Ahmednagar\nAkola\nAmravati\nAurangabad\nBeed\nBhandara\nBuldhana\nChandrapur\nDhule\nGadchiroli\nGondia\nHingoli\nJalgaon\nJalna\nKolhapur\nLatur\nMumbai City\nMumbai Suburban\nNagpur\nNanded\nNandurbar\nNashik\nOsmanabad\nPalghar\nParbhani\nPune\nRaigad\nRatnagiri\nSangli\nSatara\nSindhudurg\nSolapur\nThane\nWardha\nWashim\nYavatmal"
+  },
+  {
+   "fieldname": "registation_no",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Registation No",
+   "unique": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-06-08 09:49:48.163662",
+ "modified": "2021-06-09 11:46:15.354176",
  "modified_by": "Administrator",
  "module": "Labour Welfare",
  "name": "Labour Welfare Board",

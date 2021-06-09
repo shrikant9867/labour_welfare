@@ -2,7 +2,7 @@
 // For license information, please see license.txt
 
 frappe.ui.form.on('Labour Welfare Board', {
-	refresh: function (frm) {
-
+	validate: function (frm) {
+		frm.set_value("registation_no", frm.doc.registration_number_search)
 	}
 });
