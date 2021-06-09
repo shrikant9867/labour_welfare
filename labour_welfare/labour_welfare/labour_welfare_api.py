@@ -56,6 +56,7 @@ def labour_welfare(data=None):
 		frappe.db.commit()
 	else:
 		doc = frappe.new_doc("Labour Welfare Board")
+		doc.registation_no = data.get("registration_number")
 		doc.registration_number_search = data.get("registration_number")
 		doc.new_form = True
 		doc.renewal = False
