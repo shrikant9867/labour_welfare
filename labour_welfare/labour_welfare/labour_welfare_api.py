@@ -52,6 +52,7 @@ def labour_welfare(data=None):
 		doc.please_choose_any_one_address_proof = data.get("address_proof")
 		doc.please_select_an_option=data.get("bank_copy")
 		doc.registration_district=data.get("registration_district")
+		doc.welfare_id = data.get("welfare_id")
 		doc.save()
 		frappe.db.commit()
 	else:
@@ -92,6 +93,7 @@ def labour_welfare(data=None):
 		doc.please_choose_any_one_identity_proof=data.get("photo_id")
 		doc.please_choose_any_one_address_proof = data.get("address_proof")
 		doc.please_select_an_option=data.get("bank_copy")
+		doc.welfare_id = data.get("welfare_id")
 		doc.save()
 		frappe.db.commit()
 
