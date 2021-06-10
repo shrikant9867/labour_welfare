@@ -93,9 +93,9 @@
   },
   {
    "fieldname": "district",
-   "fieldtype": "Select",
+   "fieldtype": "Link",
    "label": "District / \u091c\u093f\u0932\u094d\u0939\u093e ",
-   "options": "Ahmednagar\nAkola\nAmravati\nAurangabad\nBeed\nBhandara\nBuldhana\nChandrapur\nDhule\nGadchiroli\nGondia\nHingoli\nJalgaon\nJalna\nKolhapur\nLatur\nMumbai City\nMumbai Suburban\nNagpur\nNanded\nNandurbar\nNashik\nOsmanabad\nPalghar\nParbhani\nPune\nRaigad\nRatnagiri\nSangli\nSatara\nSindhudurg\nSolapur\nThane\nWardha\nWashim\nYavatmal"
+   "options": "District"
   },
   {
    "fieldname": "village_city",
@@ -110,17 +110,17 @@
   {
    "fieldname": "owner_name",
    "fieldtype": "Data",
-   "label": "Owner Name / \u092e\u093e\u0932\u0915 \u092a\u0942\u0930\u094d\u0923 \u0928\u093e\u0935"
+   "label": "Employer Name / \u0928\u093f\u092f\u094b\u0915\u094d\u0924\u093e\u091a\u0947 \u092a\u0942\u0930\u094d\u0923 \u0928\u093e\u0935"
   },
   {
    "fieldname": "owner_address",
    "fieldtype": "Small Text",
-   "label": "Owner Address / \u092e\u093e\u0932\u0915\u093e\u091a\u093e \u092a\u0924\u094d\u0924\u093e"
+   "label": "Employer Address / \u0928\u093f\u092f\u094b\u0915\u094d\u0924\u093e\u091a\u0947 \u092a\u0924\u094d\u0924\u093e"
   },
   {
    "fieldname": "owner_mobile_number",
    "fieldtype": "Data",
-   "label": "Owner Mobile Number / \u092e\u093e\u0932\u0915 \u092e\u094b\u092c\u093e\u0907\u0932 \u0928\u0902\u092c\u0930"
+   "label": "Employer Mobile Number / \u0928\u093f\u092f\u094b\u0915\u094d\u0924\u093e\u091a\u0947 \u092e\u094b\u092c\u093e\u0907\u0932 \u0928\u0902\u092c\u0930"
   },
   {
    "fieldname": "beneficiary_bank_name",
@@ -140,15 +140,15 @@
   },
   {
    "fieldname": "relationship_to_nominee",
-   "fieldtype": "Select",
+   "fieldtype": "Link",
    "label": "Relationship to Nominee / \u0935\u093e\u0930\u0938\u0926\u093e\u0930\u093e\u0936\u0940  \u0905\u0938\u0932\u0947\u0932\u0947 \u0928\u093e\u0924\u0947",
-   "options": "Wife\nHusband\nSon\nDaughter"
+   "options": "Relationship to Nominee"
   },
   {
    "fieldname": "beneficiaries_total_number_of_offspring",
    "fieldtype": "Select",
    "label": "Beneficiaries Total number of offspring / \u0932\u093e\u092d\u093e\u0930\u094d\u0925\u0940 \u090f\u0915\u0941\u0923 \u0905\u092a\u0924\u094d\u092f\u093e\u091a\u0940 \u0938\u0902\u0916\u094d\u092f\u093e",
-   "options": "0\n1\n2\n3\n4"
+   "options": "0\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15"
   },
   {
    "fieldname": "registration_number_search",
@@ -215,12 +215,12 @@
   },
   {
    "fieldname": "registration_district",
-   "fieldtype": "Select",
+   "fieldtype": "Link",
    "in_filter": 1,
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Registration District/\u0928\u094b\u0902\u0926\u0923\u0940 \u091c\u093f\u0932\u094d\u0939\u093e",
-   "options": "Ahmadnagar\nAkola\nAmravati\nAurangabad\nBarshi\nBeed\nBhandara\nBhivandi\nBhuldhana\nChandrapur\nDhule\nGadchiroli\nGondiya\nHingoli\nIchalkaranji\nJalgav\nJalna\nKalyan\nKolhapur\nLatur\nMalegav\nMumbaicity\nMumbaieast\nMumbaiwest\nNagpur\nNanded\nNandurbar\nNashik\nOsmanabad\nPalgharTarapur\nParbhani\nPune\nRaigad\nRatnagiri\nSangali\nSatara\nSindhudurg\nSolapur\nThane\nTumsar\nVardha\nWashim\nYavatmal"
+   "options": "District"
   },
   {
    "fieldname": "registation_no",
@@ -263,7 +263,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-06-09 20:00:04.234916",
+ "modified": "2021-06-10 18:14:34.308581",
  "modified_by": "Administrator",
  "module": "Labour Welfare",
  "name": "Labour Welfare Board",
