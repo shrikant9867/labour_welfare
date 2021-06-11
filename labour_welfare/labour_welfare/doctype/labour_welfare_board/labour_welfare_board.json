@@ -220,7 +220,7 @@
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Registration District/\u0928\u094b\u0902\u0926\u0923\u0940 \u091c\u093f\u0932\u094d\u0939\u093e",
-   "options": "District"
+   "options": "Registration Districts"
   },
   {
    "fieldname": "registation_no",
@@ -263,7 +263,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-06-10 19:42:05.830343",
+ "modified": "2021-06-11 11:40:13.519473",
  "modified_by": "Administrator",
  "module": "Labour Welfare",
  "name": "Labour Welfare Board",
