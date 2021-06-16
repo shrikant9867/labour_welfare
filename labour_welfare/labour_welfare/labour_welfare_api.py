@@ -55,7 +55,7 @@ def labour_welfare(data=None):
 		doc.please_select_an_option=data.get("bank_copy")
 		doc.registration_district=data.get("registration_district")
 		doc.welfare_id = data.get("welfare_id")
-		doc.last_modified_date = datetime.now()
+		doc.last_modified_date = now_datetime()
 		doc.save()
 		frappe.db.commit()
 	else:
@@ -98,7 +98,7 @@ def labour_welfare(data=None):
 		doc.please_select_an_option=data.get("bank_copy")
 		doc.welfare_id = data.get("welfare_id")
 		doc.registration_district=data.get("registration_district")
-		doc.last_modified_date = datetime.now()
+		doc.last_modified_date = now_datetime()
 		doc.save()
 		frappe.db.commit()
 
