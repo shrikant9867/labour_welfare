@@ -6,13 +6,15 @@ from frappe import _
 import requests
 import json 
 import tempfile
+from datetime import datetime
+
 
 
 @frappe.whitelist()
 def labour_welfare(data=None):
 	data = json.loads(data)
 	if data.get("name"):
-		labour_data = frappe.db.sql("""SELECT * from `tabLabour Welfare Board` where name='{0}'""".format(data.get("name")), as_dict=1)
+		labour_data = frappe.db.sql("""SELECT * from `tabLabour Welfare Board` where name='{0}'""".format(data.get("name")), as_dict=1, debug=1)
 		return labour_data
 	elif frappe.db.get_value("Labour Welfare Board", data.get("registration_number")):
 		doc = frappe.get_doc("Labour Welfare Board", data.get("registration_number"))
@@ -53,6 +55,7 @@ def labour_welfare(data=None):
 		doc.please_select_an_option=data.get("bank_copy")
 		doc.registration_district=data.get("registration_district")
 		doc.welfare_id = data.get("welfare_id")
+		doc.last_modified_date = datetime.now()
 		doc.save()
 		frappe.db.commit()
 	else:
@@ -94,6 +97,7 @@ def labour_welfare(data=None):
 		doc.please_choose_any_one_address_proof = data.get("address_proof")
 		doc.please_select_an_option=data.get("bank_copy")
 		doc.welfare_id = data.get("welfare_id")
+		doc.last_modified_date = datetime.now()
 		doc.save()
 		frappe.db.commit()
 

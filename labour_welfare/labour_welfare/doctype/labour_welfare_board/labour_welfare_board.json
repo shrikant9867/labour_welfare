@@ -9,6 +9,7 @@
   "registation_no",
   "registration_number_search",
   "registration_date",
+  "last_modified_date",
   "registration_district",
   "full_name_of_domestic_work",
   "birthdate_of_beneficiany",
@@ -259,11 +260,16 @@
    "fieldname": "color_code",
    "fieldtype": "Data",
    "label": "Color Code"
+  },
+  {
+   "fieldname": "last_modified_date",
+   "fieldtype": "Datetime",
+   "label": "Last Modified Date"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-06-11 11:40:13.519473",
+ "modified": "2021-06-15 18:28:17.121941",
  "modified_by": "Administrator",
  "module": "Labour Welfare",
  "name": "Labour Welfare Board",
