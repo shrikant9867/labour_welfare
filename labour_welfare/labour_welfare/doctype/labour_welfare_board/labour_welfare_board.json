@@ -244,22 +244,26 @@
   {
    "fieldname": "corrected_registration_number",
    "fieldtype": "Data",
-   "label": "Corrected Registration Number"
+   "label": "Corrected Registration Number",
+   "report_hide": 1
   },
   {
    "fieldname": "corrected_aadhar_number",
    "fieldtype": "Data",
-   "label": "Corrected Aadhar Number"
+   "label": "Corrected Aadhar Number",
+   "report_hide": 1
   },
   {
    "fieldname": "corrected_bank_account_number",
    "fieldtype": "Data",
-   "label": "Corrected Bank Account Number"
+   "label": "Corrected Bank Account Number",
+   "report_hide": 1
   },
   {
    "fieldname": "color_code",
    "fieldtype": "Data",
-   "label": "Color Code"
+   "label": "Color Code",
+   "report_hide": 1
   },
   {
    "fieldname": "last_modified_date",
@@ -269,7 +273,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-06-15 18:28:17.121941",
+ "modified": "2021-06-16 12:37:29.603795",
  "modified_by": "Administrator",
  "module": "Labour Welfare",
  "name": "Labour Welfare Board",

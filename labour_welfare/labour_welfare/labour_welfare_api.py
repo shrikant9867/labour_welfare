@@ -97,6 +97,7 @@ def labour_welfare(data=None):
 		doc.please_choose_any_one_address_proof = data.get("address_proof")
 		doc.please_select_an_option=data.get("bank_copy")
 		doc.welfare_id = data.get("welfare_id")
+		doc.registration_district=data.get("registration_district")
 		doc.last_modified_date = datetime.now()
 		doc.save()
 		frappe.db.commit()
