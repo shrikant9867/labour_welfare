@@ -12,6 +12,7 @@ from datetime import datetime
 
 @frappe.whitelist()
 def labour_welfare(data=None):
+	print("===============")
 	data = json.loads(data)
 	if data.get("name"):
 		labour_data = frappe.db.sql("""SELECT * from `tabLabour Welfare Board` where name='{0}'""".format(data.get("name")), as_dict=1, debug=1)
@@ -102,3 +103,43 @@ def labour_welfare(data=None):
 		doc.save()
 		frappe.db.commit()
 
+	filename = []
+	file_content = []
+
+	filename.append(data.get("receipt_file_name"))
+	filename.append(data.get("adhar_card_copy"))
+	filename.append(data.get("residential_proof"))
+	filename.append(data.get("bank_pass_copy"))
+
+	file_content.append(data.get("receipt_file_content"))
+	file_content.append(data.get("adhar_card_content"))
+	file_content.append(data.get("residential_proof_content"))
+	file_content.append(data.get("bank_pass_content"))
+
+	for idx, row in enumerate(file_content):
+		new_image = bytes(row,'utf-8')
+		_file = frappe.get_doc({
+			"doctype": "File",
+			"file_name": filename[idx],
+			"attached_to_doctype": "Labour Welfare Board",
+			"attached_to_name": data.get("registration_number"),
+			"is_private": 0,
+			"content": new_image,
+			"decode": 1})
+		_file.save()
+
+
+@frappe.whitelist()
+def bank_name_data():
+	bank_name = frappe.db.sql("""SELECT name From `tabBank Name` ORDER BY name asc""", as_list=1)
+	return bank_name
+
+@frappe.whitelist()
+def registration_districts():
+	registration_districts = frappe.db.sql("""SELECT name From `tabRegistration Districts` ORDER BY name asc""", as_list=1)
+	return registration_districts
+
+@frappe.whitelist()
+def district():
+	district = frappe.db.sql("""SELECT name From `tabDistrict` ORDER BY name asc""", as_list=1)
+	return district
