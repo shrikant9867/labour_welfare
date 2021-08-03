@@ -1,0 +1,39 @@
+{
+ "category": "Modules",
+ "charts": [],
+ "creation": "2021-08-03 17:18:08.578098",
+ "developer_mode_only": 0,
+ "disable_user_customization": 0,
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "extends_another_page": 0,
+ "hide_custom": 0,
+ "icon": "website",
+ "idx": 0,
+ "is_default": 0,
+ "is_standard": 1,
+ "label": "Maharashtra Domestic Workers Welfare Board",
+ "links": [],
+ "modified": "2021-08-03 17:28:44.204611",
+ "modified_by": "Administrator",
+ "module": "Labour Welfare",
+ "name": "Maharashtra Domestic Workers Welfare Board",
+ "onboarding": "Maharashtra Domestic Workers Welfare Board",
+ "owner": "Administrator",
+ "pin_to_bottom": 0,
+ "pin_to_top": 0,
+ "shortcuts": [
+  {
+   "doc_view": "",
+   "label": "Maharashtra Domestic Workers Welfare Board",
+   "link_to": "Labour Welfare Board",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "",
+   "label": "Maharashtra Domestic Workers Welfare Board Report",
+   "link_to": "Maharashtra Domestic Workers Welfare Board Report",
+   "type": "Report"
+  }
+ ]
+}
