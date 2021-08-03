@@ -1,0 +1,29 @@
+{
+ "allow_roles": [
+  {
+   "role": "Office User"
+  },
+  {
+   "role": "System Manager"
+  }
+ ],
+ "creation": "2021-08-03 17:27:19.194073",
+ "docstatus": 0,
+ "doctype": "Module Onboarding",
+ "documentation_url": "https://prsindia.org/files/bills_acts/acts_states/maharashtra/2009/2009MH1.pdf",
+ "idx": 0,
+ "is_complete": 0,
+ "modified": "2021-08-03 17:29:33.386391",
+ "modified_by": "Administrator",
+ "module": "Labour Welfare",
+ "name": "Maharashtra Domestic Workers Welfare Board",
+ "owner": "Administrator",
+ "steps": [
+  {
+   "step": "Introduction to Maharashtra Domestic Workers Welfare Board"
+  }
+ ],
+ "subtitle": "Maharashtra Domestic Workers Welfare Board",
+ "success_message": "Maharashtra Domestic Workers Welfare Board is all set up!",
+ "title": "Maharashtra Domestic Workers Welfare Board"
+}
