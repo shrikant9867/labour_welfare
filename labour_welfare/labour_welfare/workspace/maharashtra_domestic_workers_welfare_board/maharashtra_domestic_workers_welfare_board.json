@@ -14,7 +14,7 @@
  "is_standard": 1,
  "label": "Maharashtra Domestic Workers Welfare Board",
  "links": [],
- "modified": "2021-08-04 12:44:12.671266",
+ "modified": "2021-08-04 13:51:15.791570",
  "modified_by": "Administrator",
  "module": "Labour Welfare",
  "name": "Maharashtra Domestic Workers Welfare Board",
@@ -32,12 +32,6 @@
   {
    "doc_view": "",
    "label": "Maharashtra Domestic Workers Welfare Board Report",
-   "link_to": "Maharashtra Domestic Workers Welfare Board Report",
-   "type": "Report"
-  },
-  {
-   "doc_view": "",
-   "label": "Labour Welfare Board Report",
    "link_to": "Labour Welfare Board Report",
    "type": "Report"
   }
