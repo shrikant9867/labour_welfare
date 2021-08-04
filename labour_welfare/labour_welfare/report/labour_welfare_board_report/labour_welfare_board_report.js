@@ -4,6 +4,33 @@
 
 frappe.query_reports["Labour Welfare Board Report"] = {
 	"filters": [
-
+		{
+			"fieldname":"registration_number_search",
+			"label": __("Registration Number"),
+			"fieldtype": "Link",
+			"options":'Labour Welfare Board'
+		},
+		{
+			"fieldname":"registration_district",
+			"label": __("Registration District"),
+			"fieldtype": "Link",
+			"options":'Registration Districts'
+		},
+		{
+			"fieldname":"district",
+			"label": __("District"),
+			"fieldtype": "Link",
+			"options":'District'
+		},
+		{
+			"fieldname":"from_date",
+			"label": __("From Date"),
+			"fieldtype": "Date"
+		},
+		{
+			"fieldname":"to_date",
+			"label": __("To Date"),
+			"fieldtype": "Date"
+		}
 	]
 };
