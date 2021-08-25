@@ -12,7 +12,6 @@ from datetime import datetime
 
 @frappe.whitelist()
 def labour_welfare(data=None):
-	print("===============")
 	data = json.loads(data)
 	if data.get("name"):
 		labour_data = frappe.db.sql("""SELECT * from `tabLabour Welfare Board` where name='{0}'""".format(data.get("name")), as_dict=1, debug=1)
@@ -57,6 +56,8 @@ def labour_welfare(data=None):
 		doc.registration_district=data.get("registration_district")
 		doc.welfare_id = data.get("welfare_id")
 		doc.last_modified_date = now_datetime()
+		doc.house_number = data.get("house_nunmber")
+		doc.post_office = data.get("post_office")
 		doc.save()
 		frappe.db.commit()
 	else:
@@ -100,6 +101,8 @@ def labour_welfare(data=None):
 		doc.welfare_id = data.get("welfare_id")
 		doc.registration_district=data.get("registration_district")
 		doc.last_modified_date = now_datetime()
+		doc.house_number = data.get("house_nunmber")
+		doc.post_office = data.get("post_office")
 		doc.save()
 		frappe.db.commit()
 
