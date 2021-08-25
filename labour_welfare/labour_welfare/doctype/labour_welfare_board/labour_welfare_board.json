@@ -21,7 +21,9 @@
   "state",
   "district",
   "village_city",
+  "house_number",
   "pincode",
+  "post_office",
   "owner_name",
   "owner_address",
   "owner_mobile_number",
@@ -269,11 +271,21 @@
    "fieldname": "last_modified_date",
    "fieldtype": "Datetime",
    "label": "Last Modified Date"
+  },
+  {
+   "fieldname": "house_number",
+   "fieldtype": "Data",
+   "label": "House Number "
+  },
+  {
+   "fieldname": "post_office",
+   "fieldtype": "Data",
+   "label": "Post Office"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-06-16 12:37:29.603795",
+ "modified": "2021-08-24 10:45:24.108217",
  "modified_by": "Administrator",
  "module": "Labour Welfare",
  "name": "Labour Welfare Board",
