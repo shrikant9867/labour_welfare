@@ -30,9 +30,9 @@ def get_filters_codition(filters):
 		conditions += " and district = '{0}'".format(filters.get('district'))
 
 	if filters.get("from_date"):
-		conditions += " and registration_date >= '{0}'".format(filters.get('from_date'))
+		conditions += " and last_modified_date >= '{0}'".format(filters.get('from_date'))
 	if filters.get("to_date"):
-		conditions += " and registration_date <= '{0}'".format(filters.get('to_date'))
+		conditions += " and last_modified_date <= '{0}'".format(filters.get('to_date'))
 	return conditions
 
 def get_columns():

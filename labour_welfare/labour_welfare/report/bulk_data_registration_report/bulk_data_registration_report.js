@@ -17,6 +17,11 @@ frappe.query_reports["Bulk Data Registration Report"] = {
 			"options":'Registration Districts'
 		},
 		{
+			"fieldname":"last_modified_date",
+			"label": __("Last Modified Date"),
+			"fieldtype": "Date"
+		},
+		{
 			"fieldname":"district",
 			"label": __("Residence District"),
 			"fieldtype": "Link",
