@@ -108,15 +108,14 @@ def labour_welfare(data=None):
 
 	filename = []
 	file_content = []
-
 	filename.append(data.get("receipt_file_name"))
 	filename.append(data.get("adhar_card_copy"))
-	filename.append(data.get("residential_proof"))
+	# filename.append(data.get("residential_proof"))
 	filename.append(data.get("bank_pass_copy"))
 
 	file_content.append(data.get("receipt_file_content"))
 	file_content.append(data.get("adhar_card_content"))
-	file_content.append(data.get("residential_proof_content"))
+	# file_content.append(data.get("residential_proof_content"))
 	file_content.append(data.get("bank_pass_content"))
 
 	for idx, row in enumerate(file_content):
